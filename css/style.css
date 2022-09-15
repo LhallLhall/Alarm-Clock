@@ -2,3 +2,7 @@ html {
     margin: 0px;
     background-color: gray;
 }
+
+#clock {
+    border: 1px black;
+}
