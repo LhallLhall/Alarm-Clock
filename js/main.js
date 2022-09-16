@@ -1,20 +1,18 @@
 // BEGIN
-// set the variables for the alarm
-let alarmMinutes = 1
+// set the variables for the alarm and event listeners
+// global variables
+let alarmMultiplier = .25
 let alarmStatus = false
 let alarmTime = null
 let setAlarmBtn = document.getElementById("setAlarm");
 let resetAlarmBtn = document.getElementById("resetAlarm");
+
 // create a funciton that will set the alarm time = now + 5 min in the future
 setAlarmBtn.addEventListener('click', () => {
-    
-    alert("5 minutes have been added to the alarm")
-    
+    alert("A 15 second alarm has started!")
     let date = new Date()
-    alarmTime = new Date(date.getTime() + alarmMinutes*60000);
-
+    alarmTime = new Date(date.getTime() + alarmMultiplier*60000);
     toggleAlarmStatus()
-    console.log(alarmTime);
 });
 
 resetAlarmBtn.addEventListener('click', () => {
@@ -31,6 +29,9 @@ function updateClock () {
     let minutes = now.getMinutes()
     let seconds = now.getSeconds()
     
+    // every second check the alarmStatus
+    // if the alarmStatus is on, check the time for the alarm
+    // if the alarmTime is less than now, show the alarm
     if(alarmStatus) {
         if(checkAlarm(now)){
             showAlarm();
@@ -62,18 +63,6 @@ function updateClock () {
     } else {
         theTime += "AM"
     }
-    
-      
-
-    // if (document.getElementById("12_Hours").checked) {
-        // if (hour === 0) {
-        //     hour = 12; 
-        //   } else {
-        //     if (hour > 12) {
-        //       hour = hour - 12; 
-        //     }
-        //   }
-    // }
 
     document.getElementById('theClock').innerText = theTime
 }
@@ -81,20 +70,16 @@ function updateClock () {
 
 // create a funciton to turn the alarm on or off
 function toggleAlarmStatus () {
-    alarmStatus = !alarmStatus;
+    alarmStatus = !alarmStatus; // this sets the alarmStatus to it's opposite
     if(alarmStatus){
         setAlarmBtn.innerText = "Alarm Set";
     } else {
         setAlarmBtn.innerText = "Set Alarm";
     }
 }
-// create a function to check the alarm and throw an alert
+// create a function to check the alarm and return true if the alarmTime is <= now
 function checkAlarm (now) {
-    // if (!alarmStatus) 
-    if (alarmTime.getTime() <= now.getTime()) {
-        return true;
-    }
-    return false;
+    return alarmTime.getTime() <= now.getTime(); // returns true or false
 }
 
 function showAlarm (){
@@ -107,16 +92,6 @@ function hideAlarm (){
     var text = document.getElementById('theClock');
     text.classList.remove('alarmOn');
     text.classList.add("alarmOff");
-}
-
-function adjustNumber(num){
-    str = "";
-    if(num < 10){
-        str = "0" + num;
-    } else {
-        str = num;
-    }
-    return str;
 }
 
 setInterval(updateClock,1000);  // update every second
