@@ -3,25 +3,39 @@ function getTime () {
     let date = new Date()
     let hours = date.getHours()
     let minutes = date.getMinutes()
-    let sec = date.getSeconds()
+    let seconds = date.getSeconds()
     
-    // find a way to make the clock only show up to 12. reset if it gets passed
-    if (hours === 0) { // this checks to see if the hours equal 0
-        hours = 12;  // if the hours are equal to 0 
-    } else {
-        if (hours > 12) {
-            hours = hours - 12;  
-        }
+    // find a way to make the clock only show up to 12. reset if it gets passed and add am/pm
+    // if (hours === 0) { 
+    //     hours = 12; 
+    // } else {
+    //     if (hours > 12) {
+    //         hours = hours - 12;  
+    //     }
+    // }
+
+    // do I need to update the minutes and seconds??? Answer: yes I do!
+    if (minutes < 10){ 
+        minutes = "0" + minutes
     }
-    // do I need to update the minutes and seconds???
-    
+    if (seconds < 10){
+        seconds = "0" + seconds
+    }
+
     let todaysDate = new Date();
     let day = todaysDate.getDay();
     let month = todaysDate.getMonth();
     let year = todaysDate.getFullYear();
     document.getElementById('theDate').innerText = month + "." + day + "." + year
 
-    document.getElementById('theClock').innerText = hours + ':' + minutes + ':' + sec
+    let theTime = hours + ':' + minutes + ':' + seconds + " "
+    if(hours > 11){
+        theTime += "PM"
+    } else {
+        theTime += "AM"
+    }
+
+    document.getElementById('theClock').innerText = theTime
     setInterval(getTime,1000);
 }
 getTime()
