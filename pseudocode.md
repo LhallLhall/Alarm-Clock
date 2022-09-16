@@ -16,7 +16,7 @@ need
 
 ### Funcitons
 - getTime()
-  - it will recieve data from the Data() function and use it to display the time into a div. (need to add more)
+  - it will recieve data from the Data() function and use it to display the time and date into a div.
 
 
 ### The process
