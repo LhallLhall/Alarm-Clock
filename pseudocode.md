@@ -43,4 +43,3 @@ Function getTime
 
     update time every second using setInterval
 ~~~
-    
