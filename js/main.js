@@ -14,6 +14,6 @@ function getTime () {
     }
 
 document.getElementById('theClock').innerText = hours + ':' + minutes + ':' + sec
-
+setTimeout(getTime,1000);
 }
 getTime()

@@ -23,6 +23,8 @@ Function getTime
     get the minute
     get the hour
 
+    find a way to get the time to only go to 12 then reset to 0.
+    
     find a way to update the time
 
     put the hours minutes and seconds inside of a div to display the time

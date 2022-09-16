@@ -3,6 +3,7 @@ html {
     background-color: gray;
 }
 
-#clock {
-    border: 1px black;
+#theClock {
+    border-radius: 1px black;
+    
 }
