@@ -1,11 +1,4 @@
 # Alarm clock psuedocode
-### Junk Drawer
-the clock need to get the time and date from the date function then i need to figure out how to utilize that data once it's retrieved. Will update more once I have an idea how. found a way to take the data and add it to a div using a getelementbyid and using .innertext to add the hours, minutes, and seconds.
-
-Next i need to figure out how to add a 12 hour and 24 hour button. might do something similar to silly story or image gallery
-
-need 
-
 ### Variables
 - second
 - minute
