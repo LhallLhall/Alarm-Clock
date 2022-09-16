@@ -1,6 +1,8 @@
 # Alarm clock psuedocode
 ### Junk Drawer
-the clock need to get the time and date from the date function then i need to figure out how to utilize that data once it's retrieved. Will update more once I have an idea how. found a way to take the data and add it to a div using a getelementbyid and using .innertext to add the hours, minutes, and seconds
+the clock need to get the time and date from the date function then i need to figure out how to utilize that data once it's retrieved. Will update more once I have an idea how. found a way to take the data and add it to a div using a getelementbyid and using .innertext to add the hours, minutes, and seconds.
+
+Next i need to figure out how to add a 12 hour and 24 hour button. might do something similar to silly story or image gallery
 
 need 
 
@@ -20,17 +22,17 @@ need
 ### The process
 ~~~
 Function getTime
-    get the date with Date funciton
-    use the new variable to get the second
-    get the minute
-    get the hour
+    GET the date with Date funciton
+    USE the new variable to get the second
+    GET the minute
+    GET the hour
 
-    find a way to get the time to only go to 12 then reset to 0. SUBJECT TO CHANGE WITH THE STRETCH GOALS
+    FIND a way to get the time to only go to 12 then reset to 0. SUBJECT TO CHANGE WITH THE STRETCH GOALS
 
-    get the current date with date()
-    get day
-    get month
-    get year
+    GET the current date with date()
+    GET day
+    GET month
+    GET year
     
     then put the day month year into a div to display the current date
 
