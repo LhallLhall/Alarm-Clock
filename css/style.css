@@ -1,9 +1,23 @@
 html {
     margin: 0px;
     background-color: gray;
+    font-family: "EB Garamond", serif;
+}
+
+.gridAllignment {
+    display: grid;
+    justify-content: center;
+    
 }
 
 #theClock {
-    border-radius: 1px black;
-    
+    display: grid;
+    font-size: 45px;
+    text-align: center;
+}
+
+#theDate {
+    display: grid;
+    font-size: 45px;
+    text-align: center;
 }
