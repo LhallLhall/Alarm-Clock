@@ -1,7 +1,7 @@
 // BEGIN
 // set the variables for the alarm and event listeners
 // global variables
-let alarmMultiplier = .25
+let alarmMultiplier = .25 //1 = 1 minute
 let alarmStatus = false
 let alarmTime = null
 let setAlarmBtn = document.getElementById("setAlarm");
@@ -9,9 +9,9 @@ let resetAlarmBtn = document.getElementById("resetAlarm");
 
 // create a funciton that will set the alarm time = now + 5 min in the future
 setAlarmBtn.addEventListener('click', () => {
-    alert("A 15 second alarm has started!")
+    alert("A 15 second alarm has started!") // alert that shows the user that a alarm is set
     let date = new Date()
-    alarmTime = new Date(date.getTime() + alarmMultiplier*60000); //takes an integer and multiplies it by 60 thousand milliseconds to get a time in  the future
+    alarmTime = new Date(date.getTime() + alarmMultiplier*60000); //takes an integer and multiplies it by 60 thousand milliseconds to get a time in the future for the alarm to check
     toggleAlarmStatus() //this function sets it from false to true so it can
 });
 // use an event listener to reset all of the "set alarm" actions

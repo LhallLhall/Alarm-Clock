@@ -30,7 +30,6 @@ Function getTime
     then put the day month year into a div to display the current date
 
     use a variable that has an empty string to put it the AM/PM
-    find a way to put am and pm with the time. (maybe do if else with the hours)
 
     put the hours, minutes, and seconds inside of a div to display the time
 
