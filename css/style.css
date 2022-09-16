@@ -1,0 +1,41 @@
+html {
+    margin: 0px;
+    background-color: gray;
+    font-family: helvetica, sans-serif;
+}
+.headerContainer {
+    text-align: center;
+    border-bottom: 2.5px solid #565656;
+}
+
+h1 {
+    margin: 0px;
+}
+
+.gridAlignment {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 25px;
+    padding-top: 13px;
+}
+
+#theClock {
+    font-size: 45px;
+    text-align: center;
+    /* padding-right: 25px; */
+}
+
+#theDate {
+    font-size: 45px;
+    text-align: center;
+}
+
+.alarmOff {
+    color: black;
+}
+
+.alarmOn {
+    color:red;
+}
