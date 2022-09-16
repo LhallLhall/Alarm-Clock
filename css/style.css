@@ -4,20 +4,21 @@ html {
     font-family: "EB Garamond", serif;
 }
 
-.gridAllignment {
+.gridAlignment {
     display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
+    grid-gap: 25px;
 }
 
 #theClock {
-    display: grid;
     font-size: 45px;
     text-align: center;
+    /* padding-right: 25px; */
 }
 
 #theDate {
-    display: grid;
     font-size: 45px;
     text-align: center;
 }
